@@ -1,0 +1,286 @@
+/* 1 - Start Global Styles */
+*, ::after, ::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px;
+    margin : 0px;
+}
+:root {
+    --main-color : #4d13d1;
+    --main-color-alt : #fbf8f3;
+    --main-trans : 0.3s;
+    --main-padding: 60px;
+    --sub-title : #333;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0px;
+    margin : 0px;
+}
+.container {
+    padding-left: 15px;
+    padding-right : 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+input:focus,
+textarea:focus  {
+    outline: none;
+}
+/* Small Screen */
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screen */
+@media (min-width : 992px) {
+    .container {
+        width:970px;
+    }
+}
+/* Large Screen */
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Styles */
+
+/* Start Sign */
+.sign-up {
+    align-items: center;
+    justify-content: space-between;
+
+}
+@media (min-width: 992px) {
+    .sign-up {
+        display: flex;
+        height: 100vh;
+    }
+}
+.sign-up .sign {
+    flex-basis: 50%;
+    height: 100%;
+    padding: 60px 135px;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .sign-up .sign {
+        padding: 40px 80px;
+    }
+}
+@media (max-width: 992px) {
+    .sign-up .sign {
+        flex-basis: 100%;
+        padding: 40px
+    }
+}
+.sign-up .sign h1 {
+    margin: 40px 0;
+}
+.sign-up .sign form {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.sign-up .sign form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.sign-up .sign form input:not(input[type="checkbox"]) {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 3px;
+    caret-color: var(--main-color);
+    position: relative;
+}
+.sign-up .sign form input::placeholder {
+    color: #ccc;
+}
+.sign-up .sign form .pass {
+    position: relative;
+}
+.sign-up .sign form .pass .toggle-password{
+    position: absolute;
+    top: 38px;
+    right: 17px;
+    color: #999;
+    cursor: pointer;
+    transition: var(--main-trans)
+}
+.sign-up .sign form .pass .toggle-password:hover{
+    color: #777;
+}
+.sign-up .sign form .agree {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.sign-up .sign form .agree p{
+    line-height: 1.4;
+}
+.sign-up .sign form .agree span{
+    color: var(--main-color);
+    font-weight: bold;
+    border-bottom: 2px solid;
+    width: fit-content;
+}
+@media (min-width: 768px) {
+    .sign-up .sign form .agree span{
+        display: block;
+    }
+}
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 6px 0 0;
+    font: inherit;
+    color: currentColor;
+    width: 18px;
+    height: 18px;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+input[type="checkbox"]::before {
+content: "";
+width: 0.65em;
+height: 0.65em;
+transform: scale(0);
+transition: 120ms transform ease-in-out;
+box-shadow: inset 1em 1em var(--main-color);
+}
+
+input[type="checkbox"]:checked::before {
+transform: scale(1);
+}
+
+.landing .container .info .view .start {
+    color: #fff;
+    background: var(--main-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-right: 40px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+    text-align: center;
+}
+.landing .container .info .view .start:hover {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+}
+
+.sign-up .sign .create {
+    color: #fff;
+    background: var(--main-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+    text-align: center;
+}
+.sign-up .sign .create:hover {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+}
+.sign-up .sign .account {
+    text-align: center;
+    margin-top: 14px;
+}
+.sign-up .sign .account a{
+    color: var(--main-color);
+    transition: var(--main-trans)
+}
+.sign-up .sign .account a:hover{
+    color: rgb(123 65 255 / 72%);
+}
+
+.sign-up .show {
+    background: var(--main-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    padding: 0 var(--main-padding);
+}
+@media (max-width: 992px) {
+    .sign-up .show {
+        display: none;
+    }
+}
+.sign-up img {
+    width: 500px;
+    max-width: 100%;
+}
+.sign-up .show .info {
+    text-align: center;
+    color: #fff;
+    margin: 30px 0;
+}
+.sign-up .show .info p {
+    color: rgb(255 255 255 / 69%);
+    line-height: 1.5;
+    margin-top: 6px;
+    padding: 0 50px;
+}
+.sign-up .show .info .dotes  {
+    margin-top: 10px;
+}
+.sign-up .show .info .dotes span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ffffff82;
+    border-radius: 50%;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+}
+.sign-up .show .info .dotes span:hover {
+    background-color: #fff;
+}
+.sign-up .show .info .dotes span:first-child {
+    background: #fff;
+}
+/* End Sign */

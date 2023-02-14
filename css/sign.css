@@ -161,41 +161,23 @@ input[type="checkbox"] {
     place-content: center;
 }
 input[type="checkbox"]::before {
-content: "";
-width: 0.65em;
-height: 0.65em;
-transform: scale(0);
-transition: 120ms transform ease-in-out;
-box-shadow: inset 1em 1em var(--main-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-color);
 }
 
 input[type="checkbox"]:checked::before {
-transform: scale(1);
+    transform: scale(1);
 }
-
-.landing .container .info .view .start {
-    color: #fff;
-    background: var(--main-color);
-    padding: 15px 20px;
-    border-radius: 5px;
-    margin-right: 40px;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    border: 2px solid var(--main-color);
-    transition: var(--main-trans);
-    -webkit-transition: var(--main-trans);
-    -moz-transition: var(--main-trans);
-    -ms-transition: var(--main-trans);
-    -o-transition: var(--main-trans);
-    text-align: center;
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
 }
-.landing .container .info .view .start:hover {
-    color: var(--main-color);
-    background-color: transparent;
-    border: 2px solid var(--main-color);
-}
-
 .sign-up .sign .create {
     color: #fff;
     background: var(--main-color);
